@@ -58,34 +58,35 @@
     <!-- Blog cards will be inserted here -->
   </div>
 
-  <script>
-    // Add blog posts here
-    const blogs = [
-      {
-        title: "First Blog Post",
-        content: "This is a short description of the first blog post."
-      },
-      {
-        title: "Second Blog Post",
-        content: "Here's a little more information about the second blog post."
-      },
-      {
-        title: "Another Post",
-        content: "This blog is great for keeping your thoughts organized!"
-      }
-    ];
+<script>
+  const blogs = [
+    {
+      title: "Best Influencer Marketing Platform",
+      content: "Explore the first AI-powered influencer marketing tool that automates entire campaign flow.",
+      link: "https://samvp127.github.io/Influencer-marketing-blogs/best-Influencer-marketing-platform.html"
+    }
+  ];
 
-    const blogContainer = document.getElementById('blogContainer');
+  const blogContainer = document.getElementById('blogContainer');
 
-    blogs.forEach(blog => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <h3>${blog.title}</h3>
-        <p>${blog.content}</p>
-      `;
-      blogContainer.appendChild(card);
-    });
-  </script>
+  blogs.forEach(blog => {
+    const cardLink = document.createElement('a');
+    cardLink.href = blog.link;
+    cardLink.target = "_blank";
+    cardLink.style.textDecoration = "none";
+    cardLink.style.color = "inherit";
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <h3>${blog.title}</h3>
+      <p>${blog.content}</p>
+    `;
+
+    cardLink.appendChild(card);
+    blogContainer.appendChild(cardLink);
+  });
+</script>
+
 </body>
 </html>
