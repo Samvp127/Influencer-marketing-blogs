@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Influencer Marketing and SaaS Blogs</title>
+ <meta name="description" content="Explore the Influencer Marketing and SaaS Blogs with detailed insights and information" />
+ 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Influencer Marketing Related Blogs Here</h1>
+  </header>
+
+  <div class="container" id="blogContainer">
+    <!-- Blog cards will be inserted here -->
+  </div>
+
+  <script>
+    // Add blog posts here
+    const blogs = [
+      {
+        title: "First Blog Post",
+        content: "This is a short description of the first blog post."
+      },
+      {
+        title: "Second Blog Post",
+        content: "Here's a little more information about the second blog post."
+      },
+      {
+        title: "Another Post",
+        content: "This blog is great for keeping your thoughts organized!"
+      }
+    ];
+
+    const blogContainer = document.getElementById('blogContainer');
+
+    blogs.forEach(blog => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h3>${blog.title}</h3>
+        <p>${blog.content}</p>
+      `;
+      blogContainer.appendChild(card);
+    });
+  </script>
+</body>
+</html>
